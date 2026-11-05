@@ -4,13 +4,13 @@ function getRandomInt(min, max) {
 }
 
 const number = getRandomInt(10000, 99999);
-let number2 = number;
+let rest  = number;
 let result = "";
 
-while (number2 > 0) {
-    let digit = number2 % 10;
+while (rest  > 0) {
+    let digit = rest  % 10;
     result = digit + (result ? " " + result : "");
-    number2 = Math.floor(number2 / 10);
+    rest  = Math.floor(rest / 10);
 }
 
 console.log(`Розподіл числа ${number} по модулю (%): ${result}`);
