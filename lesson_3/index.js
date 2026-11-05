@@ -5,8 +5,6 @@ const params = new URLSearchParams(window.location.search);
 const selectedScript = params.get('tab');
 const selectedGroup = params.get('group');
 const consoleHint = document.getElementById('console-hint');
-// Завдання, які виводять результат у Console, а не в alert.
-const consoleHintTabs = ['home-work_2-4', 'home-work_2-5'];
 
 const activeSubtab = [...subtabs].find((button) => button.dataset.tab === selectedScript);
 
@@ -36,6 +34,7 @@ subtabs.forEach((button) => {
 });
 
 if (activeSubtab) {
+    const consoleHintTabs = getHintTabs();
     const groupName = activeSubtab.closest('[data-subnav]').dataset.subnav;
 
     showGroup(groupName);
