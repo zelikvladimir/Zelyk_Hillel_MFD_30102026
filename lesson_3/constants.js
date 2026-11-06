@@ -14,6 +14,11 @@ const consoleHintTabs = [
     'home-work_3-6',
     'home-work_3-7',
     'home-work_3-8',
+    'home-work_4-1',
+    'home-work_4-2',
+    'home-work_4-3',
+    'home-work_4-4',
+    'home-work_4-5',
 ];
 
 // Гетери константи.
