@@ -10,7 +10,7 @@ lesson_2/
 lesson_3/
   index.html              — сторінка домашніх завдань
   index.js                — логіка сторінки: вибір групи і завдання, запуск скрипта
-  constants.js            — список завдань, що виводять результат у Console
+  constants.js            — конствтни та їх гетери
   utils.js                — спільні утиліти (getRandomInt)
   styles.css              — стилі сторінки
   home-work_2/            — завдання 2.1–2.5

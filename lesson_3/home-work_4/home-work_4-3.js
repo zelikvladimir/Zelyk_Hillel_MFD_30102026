@@ -4,9 +4,8 @@
  */
 const N = 50; // задане число
 for (let i = 1; i <= 100; i++) {
-    if (i * i <= N) {
-        console.log(i);
-    }
+    if (i * i > N) break;
+    console.log(i);
 }
 
 // Варіант 2: while
@@ -14,10 +13,4 @@ for (let i = 1; i <= 100; i++) {
 // while (i <= 100 && i * i <= N) {
 //     console.log(i);
 //     i++;
-// }
-
-// Варіант 3: for з break
-// for (let i = 1; i <= 100; i++) {
-//     if (i * i > N) break;
-//     console.log(i);
 // }

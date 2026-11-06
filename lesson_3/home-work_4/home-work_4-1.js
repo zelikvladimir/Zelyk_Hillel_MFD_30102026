@@ -9,7 +9,7 @@ for (let i = 20; i <= 30; i += 0.5) {
 }
 console.log(result.trim());
 
-// Варіант 2: методи масивів
+// Варіант 2: методи масиву
 const numbers = [];
 for (let i = 20; i <= 30; i += 0.5) {
     numbers.push(i);
