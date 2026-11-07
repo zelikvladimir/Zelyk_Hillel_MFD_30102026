@@ -1,9 +1,7 @@
-/**
- * Спільні константи для домашніх завдань.
- */
+/** Спільні константи для домашніх завдань. */
 
 // Завдання, які виводять результат у Console, а не в alert.
-const consoleHintTabs = [
+const CONSILE_HINT_TABS = [
     'home-work_2-4',
     'home-work_2-5',
     'home-work_3-1',
@@ -19,7 +17,10 @@ const consoleHintTabs = [
     'home-work_4-3',
     'home-work_4-4',
     'home-work_4-5',
+    'home-work_5-1',
 ];
+const CHARACTERS = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
 // Гетери константи.
-const getHintTabs = () => consoleHintTabs;
+const getHintTabs = () => CONSILE_HINT_TABS;
+const getCharacters = () => CHARACTERS;
