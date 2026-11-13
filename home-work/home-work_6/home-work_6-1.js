@@ -18,7 +18,7 @@ const toCents = (amount) => Math.round(amount * 100);
 const printResult = (phones, totalBalance) => {
     console.log('Телефони (баланс > $2000):', phones);
     console.log('Сума всіх балансів:', totalBalance);
-    console.log('===============================');
+    console.log('=================================');
 };
 
 // Варіант 1: цикл for...of
@@ -35,8 +35,10 @@ for (const user of users) {
     totalCentsLoop += toCents(balance);
 }
 
+const totalBalanceLoop = (totalCentsLoop / 100).toFixed(2);
+
 console.log('=== Варіант 1: цикл for...of');
-printResult(richUsersPhonesLoop, (totalCentsLoop / 100).toFixed(2));
+printResult(richUsersPhonesLoop, totalBalanceLoop);
 
 
 // Варіант 2: filter, map, reduce
@@ -89,8 +91,10 @@ for (const user of users) {
     totalCentsStrict += balanceCents;
 }
 
+const totalBalanceStrict = formatCents(totalCentsStrict, 'USD');
+
 console.log('=== Варіант 3: парсинг у цілі центи з перевіркою формату');
-printResult(richUsersPhonesStrict, formatCents(totalCentsStrict, 'USD'));
+printResult(richUsersPhonesStrict, totalBalanceStrict);
 
 
 
