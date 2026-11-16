@@ -19,6 +19,7 @@ const CONSILE_HINT_TABS = [
     'home-work_4-5',
     'home-work_5-1',
     'home-work_6-1',
+    'home-work_7-1',
 ];
 
 // Константи домашніх завдань
