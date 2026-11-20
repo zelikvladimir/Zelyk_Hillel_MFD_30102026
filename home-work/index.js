@@ -5,6 +5,8 @@ const params = new URLSearchParams(window.location.search);
 const selectedScript = params.get('tab');
 const selectedGroup = params.get('group');
 const consoleHint = document.getElementById('console-hint');
+const outputBlock = document.getElementById('output-block');
+const outputContent = document.getElementById('output-content');
 
 const activeSubtab = [...subtabs].find((button) => button.dataset.tab === selectedScript);
 
@@ -40,6 +42,12 @@ if (activeSubtab) {
     showGroup(groupName);
     activeSubtab.classList.add('active');
     consoleHint.hidden = !consoleHintTabs.includes(selectedScript);
+
+    if (getOutputBlockGroups().includes(groupName)) {
+        // Блок показується лише для груп зі списку OUTPUT_BLOCK_GROUPS.
+        outputBlock.hidden = false;
+        mirrorConsoleTo(outputContent);
+    }
 
     const script = document.createElement('script');
     script.src = groupName + '/' + activeSubtab.dataset.tab + '.js?t=' + Date.now();

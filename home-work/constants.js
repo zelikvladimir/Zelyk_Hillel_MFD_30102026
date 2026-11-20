@@ -1,6 +1,10 @@
 /** Спільні константи для домашніх завдань. */
 
-// Завдання, які виводять результат у Console, а не в alert.
+/**
+ * Назви вкладок (папок) домашніх завдань, які виводять результат у Console, а не в alert.
+ *
+ * @type {string[]}
+ */
 const CONSILE_HINT_TABS = [
     'home-work_2-4',
     'home-work_2-5',
@@ -22,8 +26,40 @@ const CONSILE_HINT_TABS = [
     'home-work_7-1',
 ];
 
-// Константи домашніх завдань
+/**
+ * Групи (розділи) домашніх завдань, на сторінках яких показується блок «Результат» (#output-block).
+ *
+ * @type {string[]}
+ */
+const OUTPUT_BLOCK_GROUPS = [
+    'home-work_8',
+];
+
+/**
+ * Набір символів: латинські літери в нижньому регістрі та цифри.
+ *
+ * @type {string}
+ */
 const CHARACTERS = 'abcdefghijklmnopqrstuvwxyz0123456789';
+
+/**
+ * Запис користувача.
+ *
+ * @typedef {Object} User
+ * @property {number} index     Порядковий номер користувача, починається з 0.
+ * @property {boolean} isActive Чи активний користувач.
+ * @property {string} balance   Баланс у форматі рядка з символом валюти, наприклад "$2,226.60".
+ * @property {string} name      Повне ім'я.
+ * @property {string} gender    Стать: "female" або "male".
+ * @property {string} phone     Номер телефону у форматі "+1 (XXX) XXX-XXXX".
+ * @property {string} address   Поштова адреса одним рядком.
+ */
+
+/**
+ * Тестові дані користувачів.
+ *
+ * @type {User[]}
+ */
 const USERS = [
     {
         index: 0,
@@ -90,7 +126,30 @@ const USERS = [
     // },
 ];
 
-// Гетери константи.
+/**
+ * Повертає список назв вкладок, які виводять результат у Console.
+ *
+ * @returns {string[]} Масив назв вкладок.
+ */
 const getHintTabs = () => CONSILE_HINT_TABS;
+
+/**
+ * Повертає групи, на яких показується блок «Результат».
+ *
+ * @returns {string[]} Масив назв груп.
+ */
+const getOutputBlockGroups = () => OUTPUT_BLOCK_GROUPS;
+
+/**
+ * Повертає набір символів, що складається з латинських літер і цифр.
+ *
+ * @returns {string} Рядок символів.
+ */
 const getCharacters = () => CHARACTERS;
+
+/**
+ * Повертає масив тестових користувачів.
+ *
+ * @returns {User[]} Масив об'єктів користувачів.
+ */
 const getUsers = () => USERS;

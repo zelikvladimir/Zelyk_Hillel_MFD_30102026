@@ -14,6 +14,7 @@
         <button class="tab" data-group="home-work_5">Домашнє 5</button>
         <button class="tab" data-group="home-work_6">Домашнє 6</button>
         <button class="tab" data-group="home-work_7">Домашнє 7</button>
+        <button class="tab" data-group="home-work_8">Домашнє 8</button>
         <button id="reset-button" class="reset-button">RESET</button>
     </nav>
 
@@ -55,10 +56,19 @@
     <nav class="subtabs" data-subnav="home-work_7" hidden>
         <button class="subtab" data-tab="home-work_7-1">Завдання 7.1</button>
     </nav>
+    <nav class="subtabs" data-subnav="home-work_8" hidden>
+        <button class="subtab" data-tab="home-work_8-1">Завдання 8.1</button>
+    </nav>
 
     <p id="console-hint" class="console-hint" hidden>Відкрийте панель розробника (F12 або Ctrl+Shift+I) та вкладку Console, щоб побачити результати.</p>
 
+    <section id="output-block" class="output-block" hidden>
+        <h2 class="output-title">Результат</h2>
+        <pre id="output-content" class="output-content"></pre>
+    </section>
+
     <script src="constants.js"></script>
+    <script src="pluralRules.js"></script>
     <script src="utils.js"></script>
     <script src="index.js" defer></script>
     
